@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Overpass Turbo Export</name>
+    <description>Exported from Overpass Turbo</description>
+
+    <!-- A highway (linestring) -->
+    <Placemark>
+      <name>Main Street</name>
+      <ExtendedData>
+        <Data name="@id"><value>way/12345</value></Data>
+        <Data name="highway"><value>primary</value></Data>
+        <Data name="name"><value>Main Street</value></Data>
+        <Data name="lanes"><value>2</value></Data>
+        <Data name="surface"><value>asphalt</value></Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-73.9857,40.7484,0 -73.9862,40.7490,0 -73.9870,40.7500,0</coordinates>
+      </LineString>
+    </Placemark>
+
+    <!-- A residential road -->
+    <Placemark>
+      <name>Elm Avenue</name>
+      <ExtendedData>
+        <Data name="@id"><value>way/12346</value></Data>
+        <Data name="highway"><value>residential</value></Data>
+        <Data name="name"><value>Elm Avenue</value></Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-73.9900,40.7450,0 -73.9910,40.7460,0</coordinates>
+      </LineString>
+    </Placemark>
+
+    <!-- A building (polygon) -->
+    <Placemark>
+      <name>City Library</name>
+      <ExtendedData>
+        <Data name="@id"><value>way/23456</value></Data>
+        <Data name="building"><value>yes</value></Data>
+        <Data name="name"><value>City Library</value></Data>
+        <Data name="amenity"><value>library</value></Data>
+      </ExtendedData>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              -73.9850,40.7480,0
+              -73.9850,40.7485,0
+              -73.9845,40.7485,0
+              -73.9845,40.7480,0
+              -73.9850,40.7480,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+
+    <!-- A park (polygon) -->
+    <Placemark>
+      <name>Riverside Park</name>
+      <ExtendedData>
+        <Data name="@id"><value>way/34567</value></Data>
+        <Data name="leisure"><value>park</value></Data>
+        <Data name="name"><value>Riverside Park</value></Data>
+      </ExtendedData>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              -73.9700,40.7900,0
+              -73.9700,40.7920,0
+              -73.9680,40.7920,0
+              -73.9680,40.7900,0
+              -73.9700,40.7900,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+
+    <!-- A restaurant (point) -->
+    <Placemark>
+      <name>Joe's Pizza</name>
+      <ExtendedData>
+        <Data name="@id"><value>node/45678</value></Data>
+        <Data name="amenity"><value>restaurant</value></Data>
+        <Data name="name"><value>Joe's Pizza</value></Data>
+        <Data name="cuisine"><value>pizza</value></Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>-73.9960,40.7308,0</coordinates>
+      </Point>
+    </Placemark>
+
+    <!-- A river (linestring) -->
+    <Placemark>
+      <name>Hudson River</name>
+      <ExtendedData>
+        <Data name="@id"><value>way/56789</value></Data>
+        <Data name="waterway"><value>river</value></Data>
+        <Data name="name"><value>Hudson River</value></Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-74.0000,40.7000,0 -74.0000,40.7500,0 -74.0000,40.8000,0</coordinates>
+      </LineString>
+    </Placemark>
+
+    <!-- A railway -->
+    <Placemark>
+      <name>Metro Line</name>
+      <ExtendedData>
+        <Data name="@id"><value>way/67890</value></Data>
+        <Data name="railway"><value>subway</value></Data>
+        <Data name="name"><value>Metro Line</value></Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-73.9800,40.7600,0 -73.9750,40.7650,0 -73.9700,40.7700,0</coordinates>
+      </LineString>
+    </Placemark>
+
+    <!-- A hospital (point) -->
+    <Placemark>
+      <name>General Hospital</name>
+      <ExtendedData>
+        <Data name="@id"><value>node/78901</value></Data>
+        <Data name="amenity"><value>hospital</value></Data>
+        <Data name="name"><value>General Hospital</value></Data>
+      </ExtendedData>
+      <Point>
+        <coordinates>-73.9420,40.7830,0</coordinates>
+      </Point>
+    </Placemark>
+
+    <!-- A footway -->
+    <Placemark>
+      <name>Park Trail</name>
+      <ExtendedData>
+        <Data name="@id"><value>way/89012</value></Data>
+        <Data name="highway"><value>footway</value></Data>
+        <Data name="name"><value>Park Trail</value></Data>
+      </ExtendedData>
+      <LineString>
+        <coordinates>-73.9690,40.7905,0 -73.9695,40.7910,0 -73.9685,40.7915,0</coordinates>
+      </LineString>
+    </Placemark>
+
+    <!-- A water body (polygon) -->
+    <Placemark>
+      <name>Central Lake</name>
+      <ExtendedData>
+        <Data name="@id"><value>way/90123</value></Data>
+        <Data name="natural"><value>water</value></Data>
+        <Data name="name"><value>Central Lake</value></Data>
+      </ExtendedData>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              -73.9650,40.7820,0
+              -73.9650,40.7830,0
+              -73.9640,40.7830,0
+              -73.9640,40.7820,0
+              -73.9650,40.7820,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+
+  </Document>
+</kml>
