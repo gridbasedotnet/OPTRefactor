@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import zipfile
 from dataclasses import dataclass, field
 from typing import Literal
 from lxml import etree
@@ -88,7 +89,19 @@ def parse_kml(source: str | bytes) -> list[Feature]:
     return features
 
 
+def _read_kmz(path: str) -> bytes:
+    """Extract the KML content from a KMZ (ZIP) archive."""
+    with zipfile.ZipFile(path, "r") as zf:
+        # KMZ spec: the first .kml file found (usually doc.kml)
+        for name in zf.namelist():
+            if name.lower().endswith(".kml"):
+                return zf.read(name)
+        raise ValueError(f"No .kml file found inside {path}")
+
+
 def parse_kml_file(path: str) -> list[Feature]:
-    """Convenience wrapper: read a KML file from disk and parse it."""
+    """Read a KML or KMZ file from disk and parse it."""
+    if path.lower().endswith(".kmz"):
+        return parse_kml(_read_kmz(path))
     with open(path, "rb") as f:
         return parse_kml(f.read())
